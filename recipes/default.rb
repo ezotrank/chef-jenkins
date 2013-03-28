@@ -123,6 +123,7 @@ when "ubuntu", "debian"
 
 when "centos", "redhat"
   #see http://jenkins-ci.org/redhat/
+  include_recipe "java"
   key_url = "http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key"
 
   remote = "#{node[:jenkins][:mirror]}/latest/redhat/jenkins.rpm"

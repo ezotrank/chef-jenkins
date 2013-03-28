@@ -114,6 +114,9 @@ default[:jenkins][:node][:jvm_options] = nil
 #jenkins master defaults to: "#{ENV['HOME']}/.ssh/id_rsa"
 default[:jenkins][:node][:ssh_private_key] = nil
 
+# Can set nginx or nginx::source
+default[:jenkins][:http_proxy][:nginx_type]           = "nginx"
+
 default[:jenkins][:http_proxy][:variant]              = nil
 default[:jenkins][:http_proxy][:www_redirect]         = "disable"
 default[:jenkins][:http_proxy][:listen_ports]         = [ 80 ]
